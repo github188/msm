@@ -4,7 +4,7 @@
  * Copyright (C) 2015 liyunteng
  * Auther: liyunteng <li_yunteng@163.com>
  * License: GPL
- * Update time:  2015/08/23 21:12:54
+ * Update time:  2015/08/23 19:26:13
  *
  * This program is free software; you can redistribute it and/or modify it
  * under the terms and conditions of the GNU General Public License,
@@ -271,9 +271,9 @@ int Msm::init()
                                 if (events[n].events & EPOLLIN) {
                                         epoll_pollin(events[n].data.fd);
                                 } else if (events[n].events & EPOLLOUT) {
-                                        // LOG(LOG_DEBUG, "socket: %d EPOLLOUT event.", events[n].data.fd);
+                                        LOG(LOG_DEBUG, "socket: %d EPOLLOUT event.", events[n].data.fd);
                                 } else {
-                                        // LOG(LOG_DEBUG, "socket: %d Unknown event.", events[n].data.fd);
+                                        LOG(LOG_DEBUG, "socket: %d Unknown event.", events[n].data.fd);
                                 }
                         }
                 }
